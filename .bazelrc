@@ -1,0 +1,13 @@
+# Indexing support for sourcekit-bazel-bsp (no WMO, emit index data)
+common --compilation_mode=dbg
+common --features=swift.index_while_building
+common --features=swift.use_global_index_store
+common --features=swift.emit_swiftsourceinfo
+
+# Only for BSP builds
+common:index_build --experimental_convenience_symlinks=ignore
+common:index_build --show_result=0
+common:index_build --noshow_progress
+common:index_build --noannounce_rc
+common:index_build --curses=no
+common:index_build --color=no
