@@ -1,0 +1,14 @@
+# Ignore Swift Package Manager build artifacts, some of it might contain BUILD files
+**/.build
+
+# Ignore Bazel symlinks
+bazel-*
+bazel-*/
+
+# Ignore .git directories(i remember this slowing down xcode Git pane!)
+**/.git
+.git/**
+.git/
+
+# Ignore JJ
+.jj/**
