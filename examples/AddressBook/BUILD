@@ -10,7 +10,8 @@ proto_library(
 )
 
 swift_proto_library(
-    name = "AddressbookProto_swift",
+    name = "AddressbookProto_library",
+    module_name = "AddressbookProtoLibrary",
     protos = [":addressbook_proto"],
 )
 
@@ -19,7 +20,7 @@ swift_library(
     srcs = [
         "main.swift",
     ],
-    deps = ["AddressbookProto_swift"],
+    deps = [":AddressbookProto_library"],
 )
 
 # Top-level target; sourcekit-bazel-bsp indexes libraries through one.
